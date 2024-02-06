@@ -1,50 +1,60 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header title={SITE_TITLE} />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to
-				build a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like
-				Tailwind, React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/pages/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
-</html>
+<Layout>
+  <main class="bg-[#25316D]">
+    <section
+      id="hero-section"
+      class="h-screen w-screen flex flex-col items-center justify-center text-6xl font-extrabold text-[#FFEED9]"
+    >
+      <img src="./moonlogo.png" />
+      <h1 class="text-center">MyMoon Customs</h1>
+    </section>
+    <section
+      id="hero-section"
+      class="h-screen w-screen flex flex-col items-center justify-center text-6xl font-extrabold text-[#FFEED9]"
+    >
+      <img src="./moonlogo.png" />
+      <h1 class="text-center">MyMoon Customs</h1>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  html {
+    font-family: "Alegreya Variable";
+  }
+  /* eb-garamond-latin-wght-normal */
+  /* dm-serif-text-latin-400-normal */
+  @font-face {
+    font-family: "DM Serif Text";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src:
+      url(https://cdn.jsdelivr.net/fontsource/fonts/dm-serif-text@latest/latin-400-normal.woff2)
+        format("woff2"),
+      url(https://cdn.jsdelivr.net/fontsource/fonts/dm-serif-text@latest/latin-400-normal.woff)
+        format("woff");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+      U+02DC, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+2000-206F,
+      U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+  /* alegreya-latin-wght-normal */
+  @font-face {
+    font-family: "Alegreya Variable";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400 900;
+    src: url(https://cdn.jsdelivr.net/fontsource/fonts/alegreya:vf@latest/latin-wght-normal.woff2)
+      format("woff2-variations");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+      U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122,
+      U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+</style>
+<script></script>
