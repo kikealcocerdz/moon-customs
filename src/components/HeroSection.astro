@@ -1,0 +1,82 @@
+<section
+  id="hero-section"
+  class="h-screen w-screen flex flex-col items-center justify-center text-6xl font-extrabold text-[#FFEED9]"
+>
+  <img
+    class="opacity-1 w-[200px] h-[200px] rounded-full relative heroImage lg:right[5%]"
+    src="./moonlogo.png"
+    alt="logo"
+  />
+  <h1
+    class="animated-name-1 text-center opacity-1 font-extrabold z-50 relative text-6xl"
+  >
+    MyMoon Customs
+  </h1>
+  <h3 class="animated-name-11 text-2xl lg:text-3xl">
+    Customización de prendas
+  </h3>
+  <dotlottie-player
+    class="mt-24 w-[60px] h-[60px]"
+    src="https://lottie.host/0abfa829-a1d5-4057-9efe-cb91d6d998c1/onCb9lk6fp.json"
+    background="transparent"
+    speed="1"
+    loop
+    autoplay></dotlottie-player>
+</section>
+<script
+  src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+  type="module"></script>
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  gsap.registerPlugin(ScrollTrigger);
+  const rightPerc = () => {
+    if (window.innerWidth > 500) {
+      return "5%";
+    } else {
+      return;
+    }
+  };
+  const t1 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".heroImage",
+      start: "top 20%",
+      end: "bottom 20%",
+      scrub: true,
+    },
+  });
+  t1.to(".heroImage", {
+    scale: 0.3,
+    x: 140,
+    y: -55,
+  });
+  t1.to(
+    ".animated-name-1",
+    {
+      opacity: 0,
+    },
+    "<"
+  );
+  t1.to(
+    ".animated-name-11",
+    {
+      opacity: 0,
+    },
+    0
+  );
+  t1.to(
+    ".headerHero",
+    {
+      opacity: 1,
+    },
+    0
+  );
+  t1.set(".heroImage", {
+    position: "fixed",
+    top: "0px",
+    right: rightPerc(),
+    opacity: 1,
+    duration: 3,
+    zIndex: 100,
+  });
+</script>

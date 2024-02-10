@@ -1,0 +1,79 @@
+---
+import Socials from "../components/Socials.astro";
+---
+
+<section id="about-section">
+  <div
+    class="flex flex-col items-center justify-center aboutDiv h-full overflow-x-hidden"
+  >
+    <div class="image1 flex flex-row justify-center items-center">
+      <img class="lg:w-1/2" src="/soul1.jpeg" /><div
+        class="flex justify-center items-center h-full w-full"
+      >
+        <h3 class="ml-10 text-2xl text-white">Frase1</h3>
+      </div>
+    </div>
+    <div class="image2 flex flex-row items-center">
+      <div
+        class="flex relative left-[-150px] justify-center items-center h-full"
+      >
+        <h3 class="mr-10 text-2xl text-white">Frase2</h3>
+      </div>
+      <img class="lg:w-1/2" src="/aida2.jpg" />
+    </div>
+    <div class="image3 flex flex-row items-center">
+      <img class="lg:w-1/2" src="/soul2.jpeg" /><div
+        class="flex justify-center items-center h-full w-full"
+      >
+        <h3 class="ml-10 text-2xl lg:text-4xl text-white">Frase3</h3>
+      </div>
+    </div>
+    <div
+      class="h-screen w-full flex items-center justify-center flex-col bg-cover bg-center bg-no-repeat bg-[url('./extremoduro.jpg')]"
+    >
+      <Socials />
+    </div>
+  </div>
+
+  <script>
+    import { gsap } from "gsap";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+    gsap.registerPlugin(ScrollTrigger);
+
+    const t1 = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".image1",
+        start: "center 70%",
+        end: "bottom 70%",
+        scrub: true,
+      },
+    });
+    t1.to(".image1", {
+      x: -200,
+    });
+
+    const t2 = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".image2",
+        start: "center 70%",
+        end: "bottom 70%",
+        scrub: true,
+      },
+    });
+    t2.to(".image2", {
+      x: 200,
+    });
+
+    const t3 = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".image3",
+        start: "center 70%",
+        end: "bottom 70%",
+        scrub: true,
+      },
+    });
+    t3.to(".image3", {
+      x: -200,
+    });
+  </script>
+</section>
