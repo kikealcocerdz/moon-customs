@@ -6,24 +6,28 @@ import Socials from "../components/Socials.astro";
   <div
     class="flex flex-col items-center justify-center aboutDiv h-full overflow-x-hidden"
   >
-    <div class="image1 relative lg:right-[-30%] flex flex-row items-center">
-      <img class="relative right-0" src="/soul1.jpeg" /><div
-        class="flex justify-center items-center h-full w-full"
-      >
-        <h3 class="ml-10 text-2xl text-white">Frase1</h3>
+    <div class="image1 relative lg:right-[-50%] flex flex-row items-center">
+      <img
+        class="relative right-0 lg:h-[750px] lg:w-[750px]"
+        src="/soul1.jpeg"
+      /><div class="flex justify-center items-center h-full w-full">
+        <h3 class="ml-10 text-2xl text-white">1. LOREM IPSUM LOREM IPSUM</h3>
       </div>
     </div>
-    <div class="image2 relative lg:right-[-30%] flex flex-row items-center">
+    <div class="image2 relative lg:left-[-30%] flex flex-row items-center">
       <div class="flex relative justify-center items-center h-full">
-        <h3 class="mr-10 text-2xl text-white">Frase2</h3>
+        <h3 class="mr-10 text-2xl text-white">2. LOREM IPSUMLOREM IPSUM</h3>
       </div>
-      <img class="relative left-0" src="/aida2.jpg" />
+      <img class="lg:w-[750px] lg:h-[750px] relative left-0" src="/aida2.jpg" />
     </div>
-    <div class="image3 relative lg:right-[-30%] flex flex-row items-center">
-      <img class="relative left-0" src="/soul2.jpeg" /><div
-        class="flex justify-center items-center h-full w-full"
-      >
-        <h3 class="ml-10 text-2xl lg:text-4xl text-white">Frase3</h3>
+    <div class="image3 relative lg:right-[-55%] flex flex-row items-center">
+      <img
+        class="lg:w-[750px] lg:h-[750px] relative left-0"
+        src="/soul2.jpeg"
+      /><div class="flex justify-center items-center h-full w-full">
+        <h3 class="ml-10 text-2xl lg:text-4xl text-white">
+          3. LOREM IPSUM LOREM IPSUM
+        </h3>
       </div>
     </div>
     <div
@@ -42,19 +46,19 @@ import Socials from "../components/Socials.astro";
       scrollTrigger: {
         trigger: ".image1",
         start: "30% 40%",
-        end: "bottom 40%",
+        end: "center 40%",
         scrub: true,
       },
     });
     t1.to(".image1", {
-      x: -window.innerWidth / 2,
+      x: -window.innerWidth / 1.5,
     });
 
     const t2 = gsap.timeline({
       scrollTrigger: {
         trigger: ".image2",
-        start: "center 40%",
-        end: "bottom 40%",
+        start: "10% 40%",
+        end: "center 40%",
         scrub: true,
       },
     });
@@ -66,12 +70,12 @@ import Socials from "../components/Socials.astro";
       scrollTrigger: {
         trigger: ".image3",
         start: "30% 40%",
-        end: "bottom 40%",
+        end: "center 40%",
         scrub: true,
       },
     });
     t3.to(".image3", {
-      x: -window.innerWidth / 2,
+      x: -window.innerWidth / 1.8,
     });
   </script>
 </section>
