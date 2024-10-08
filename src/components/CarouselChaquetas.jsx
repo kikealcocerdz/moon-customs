@@ -15,7 +15,7 @@ export default function App() {
   return (
     <>
       <Swiper
-        className="mySwiper"
+        className="mySwiper border-2 border-yellow-200"
         spaceBetween={50}
         autoplay={{
           delay: 5500,
