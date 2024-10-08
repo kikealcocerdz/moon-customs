@@ -4,7 +4,7 @@ export default {
 	theme: {
 		extend: {
 			backgroundImage: {
-				'extremo': "url('./extremoduro.jpg')",
+				'extremo': "url('extremoduro.jpg')",
 			},
 		}
 	},
